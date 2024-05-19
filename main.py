@@ -22,8 +22,8 @@ def stop_cycle():
 def run_cycle():
     choice = input("What would you like? (espresso/latte/cappuccino/): ")
     if choice == "report":
-        print(coffee_maker.report())
-        print(money_machine.report())
+        coffee_maker.report()
+        money_machine.report()
     elif choice == "espresso" or choice == "latte" or choice == "cappuccino":
         current_item = machine_menu.find_drink(choice)
         enough_resources = coffee_maker.is_resource_sufficient(current_item)
